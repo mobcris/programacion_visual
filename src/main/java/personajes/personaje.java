@@ -3,9 +3,6 @@ package personajes;
 import javax.swing.*;
 import java.awt.*;
 
-import javax.swing.*;
-import java.awt.*;
-
 public class Personaje extends JLabel {
     private Color color;
     private final int tamano = 50;
