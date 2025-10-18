@@ -1,13 +1,13 @@
-package personajes;
+package personaje;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class Personaje extends JLabel {
+public class personaje extends JLabel {
     private Color color;
     private final int tamano = 50;
 
-    public Personaje(Color color) {
+    public personaje(Color color) {
         this.color = color;
 
         setBackground(color);

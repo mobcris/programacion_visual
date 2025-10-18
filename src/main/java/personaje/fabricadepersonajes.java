@@ -1,4 +1,4 @@
-package personajes;
+package personaje;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,12 +6,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 
-public class FabricaPersonajes extends JFrame implements KeyListener {
+public class fabricadepersonajes extends JFrame implements KeyListener {
 
     private final int VELOCIDAD = 10;
-    private ArrayList<Personaje> personajes; // Lista para mantener todos los objetos
+    private ArrayList<personaje> personajes; // Lista para mantener todos los objetos
 
-    public FabricaPersonajes() {
+    public fabricadepersonajes() {
         super("Fábrica de Personajes (POO)");
 
         // Ventana Principal
@@ -25,20 +25,20 @@ public class FabricaPersonajes extends JFrame implements KeyListener {
         personajes = new ArrayList<>();
 
         // Gato
-        Personaje gato = new Personaje(Color.ORANGE);
+        personaje gato = new personaje(Color.ORANGE);
         gato.setLocation(50, 50);
         personajes.add(gato);
         add(gato);
 
         //Robot
-        Personaje robot = new Personaje(Color.CYAN);
+        personaje robot = new personaje(Color.CYAN);
         robot.setText("Robot");
         robot.setLocation(150, 50);
         personajes.add(robot);
         add(robot);
 
         // Fantasma
-        Personaje fantasma = new Personaje(Color.MAGENTA);
+        personaje fantasma = new personaje(Color.MAGENTA);
         fantasma.setText("👻");
         fantasma.setLocation(250, 50);
         personajes.add(fantasma);
@@ -74,7 +74,7 @@ public class FabricaPersonajes extends JFrame implements KeyListener {
         }
 
         // Aplicar el mismo movimiento a TODOS los objetos (Instancias)
-        for (Personaje p : personajes) {
+        for (personaje p : personajes) {
             p.mover(dx, dy);
         }
     }
@@ -88,6 +88,6 @@ public class FabricaPersonajes extends JFrame implements KeyListener {
     // --- Método Main ---
     public static void main(String[] args) {
         // Ejecutar la aplicación en el hilo de eventos de Swing
-        SwingUtilities.invokeLater(() -> new FabricaPersonajes());
+        SwingUtilities.invokeLater(() -> new fabricadepersonajes());
     }
 }
